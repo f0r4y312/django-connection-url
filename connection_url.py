@@ -85,7 +85,7 @@ def config(env, *args, **kwargs):
 
         # Pass the query string into OPTIONS.
         options = {}
-        for key, values in query.iteritems():
+        for key, values in query.items():
             options[key] = values[-1]
 
         if options:
@@ -106,7 +106,7 @@ def config(env, *args, **kwargs):
             config = default
 
     # Use kwargs to override any parsed values
-    for cfg,val in kwargs.iteritems():
+    for cfg,val in kwargs.items():
         config[cfg] = val
 
     return config
