@@ -10,7 +10,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-connection-url',
-    version='0.1.1',
+    version='0.1.2',
     description='Use connection URLs for Database/Cache settings in your Django project.',
     long_description=README,
     url='https://github.com/f0r4y312/django-connection-url',

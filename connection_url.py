@@ -80,8 +80,8 @@ def config(env, *args, **kwargs):
             config = config_cache(url, path)
         else:
             raise ImproperlyConfigured(
-                    "Cannot resolve connection URL scheme '%s' into engine. Choices are: %s" %
-                    (url.scheme, ', '.join(sorted(DB_SCHEMES.keys()) + sorted(CACHE_SCHEMES.keys()))))
+                    "Cannot resolve connection URL scheme '%s' in %s (%s) into engine. Choices are: %s" %
+                    (url.scheme, env, cnxn_url, ', '.join(sorted(DB_SCHEMES.keys()) + sorted(CACHE_SCHEMES.keys()))))
 
         # Pass the query string into OPTIONS.
         options = {}
